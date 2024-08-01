@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Header from './Header'
-import Product from "./Product"
+import ProductsContainer from './Productscontainer'
 import Poster from './Poster'
 
 //Home Component to display all products
@@ -11,7 +11,7 @@ const Home = () => {
             <div className="container">
                 <Header />
                 <Poster />
-                <Product />
+                <ProductsContainer />
             </div>
         </>
     )

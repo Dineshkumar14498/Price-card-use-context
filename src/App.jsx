@@ -4,7 +4,8 @@ import productsData from "./Product.json"
 import Mycontext from './Components/Mycontext'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './Components/Home'
-import Deliverycart from './Components/Deliverycart'
+import Cart from './Components/Cart'
+
 
 const App = () => {
  
@@ -15,12 +16,12 @@ const App = () => {
 
   //function to add selected products to cart
   const addProductToCart = (product) => {
-    setAddedProducts([...addedProducts, { ...product, quantity: 1 }]);
+    setAddedProducts([...addedProducts, { ...product, quantity:1 }]);
   }
 
   //function to remove products from cart
   const removeProductFromCart = (id) => {
-    setAddedProducts(addedProducts.filter(product => product.id != id));
+    setAddedProducts(addedProducts.filter(product => product. id != id));
   }
 
   //function to update product quantity
@@ -43,8 +44,8 @@ const App = () => {
       element: <Home/>
     },
     {
-      path: '/deliverycart',
-      element: <Deliverycart/>
+      path: '/cart',
+      element: <Cart />
     }
   ]);
   return (

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Header = () => {
     // Initialize 'isScroll' state variable to false and provide 'setIsScroll' function to update it.
     const [isScroll, setIsScroll] = useState(false);
-    const { productCount } = useContext(Mycontext);
+    let { productCount } = useContext(Mycontext);
     
     // Add an event listener to update 'isScroll' state based on window scroll position
     useEffect(() => {
@@ -28,17 +28,18 @@ const Header = () => {
     
     const navigate = useNavigate();
     const handleCartClick = () => {
-        navigate('/Cart');
+        navigate('/cart');
     }
 
     return (
         <header className={isScroll ? 'scrolled' : ""}>
             <div className='header'>
                 <div className="left">
-                    <h1>logo</h1>
+                    <h1>iphone</h1>
                     <ul>
                         <li>Home</li>
-                        <li>About</li>
+                        <li>Store</li>
+                        <li>Support</li>
                         <li>Shop</li>
                     </ul>
                 </div>

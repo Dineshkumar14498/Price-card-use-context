@@ -63,9 +63,9 @@ export const Cardforcart = ({ product }) => {
                     }
                 </div>
                 <div className="right d-flex flex-column justify-content-around">
-                    <h5 className='price'>${product.price}</h5>
+                    <h5 className='price'>Rs.{product.price}</h5>
                     {
-                        updatedValue <= product.rating.count ? <h5 className='price'><div className='discount-title'>Total:</div>${('quantity' in product)
+                        updatedValue <= product.rating.count ? <h5 className='price'><div className='discount-title'>Total:</div>Rs.{('quantity' in product)
                             ? (product.price * product.quantity).toFixed(2)
                             :
                             (product.price * productQuantity).toFixed(2)

@@ -6,7 +6,7 @@ const Card = ({product}) => {
    
 
   // Initialize 'btnStatus' state variable to false and provide 'setBtnStatus' function to update it.
-  //const [btnStatus, setBtnStatus] = useState(false);
+  const [btnStatus, setBtnStatus] = useState(false);
   const { setProductCount,addProductToCart,removeProductFromCart } = useContext(Mycontext);
   
   //Function to update button and cart status
@@ -28,7 +28,7 @@ const Card = ({product}) => {
       <div className='card-content'>
         <img className='product-img' src={product.image} alt="" />
         <h6 className='mt-3 product-title text-center'>{product.title}</h6>
-        <p>${product.price}</p>
+        <p>Rs.{product.price}</p>
         <button onClick={change}
           className={product.status ? 'btn border-dark' : 'btn btn-dark'}>
           {product.status ? 'Remove from cart' : 'Add to cart'}

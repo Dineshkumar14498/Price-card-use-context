@@ -3,7 +3,7 @@ import Card from './Card'
 import Mycontext from './Mycontext';
 
 //ProductsContainer Component
-const ProductsContainer = ({ setProductCount }) => {
+const ProductsContainer = ({ setProductcount }) => {
   const {productsData} = useContext(Mycontext);
   return (
     <div className="row product-container g-0 d-flex justify-content-center">

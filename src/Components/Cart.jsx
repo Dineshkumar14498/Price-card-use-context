@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import Mycontext from './Mycontext';
 import CartPageHeader from './Cartpageheader';
-//import {CardForCart} from './Cardforcart';
+import {Cardforcart} from './Cardforcart'
  
-//import emptyCart from "../assets/cart-empty.svg";
+import emptyCart from "../assets/Cart-empty.svg";
 
-const Deliverycart = () => {
+const Cart = () => {
     var total = 0;
     var totalQuantity = 0;
     const { addedProducts } = useContext(Mycontext);
@@ -31,7 +31,7 @@ const Deliverycart = () => {
                 }
                 {
                     addedProducts.map((product, index) => (
-                        <CardForCart key={index + 5} product={product} />
+                        <Cardforcart key={index + 5} product={product} />
                     ))
                 }
             </div>
@@ -39,7 +39,7 @@ const Deliverycart = () => {
                 <hr />
                 <div className="subtotal">
                     <h6>SUBTOTAL:</h6>
-                    <h6>${total.toFixed(2)}</h6>
+                    <h6>Rs.{total.toFixed(2)}</h6>
                 </div>
                 <div className="subtotal">
                     <h6>TOTAL QUANTITY:</h6>
@@ -52,11 +52,11 @@ const Deliverycart = () => {
                 <hr />
                 <div className="total">
                     <h5>TOTAL:</h5>
-                    <h4>${total.toFixed(2)}</h4>
+                    <h4>Rs.{total.toFixed(2)}</h4>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Deliverycart
+export default Cart;
